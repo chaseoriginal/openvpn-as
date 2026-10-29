@@ -1,0 +1,19 @@
+services:
+  openvpn-as:
+    image: lscr.io/linuxserver/openvpn-as:latest
+    container_name: openvpn-as
+    cap_add:
+    - NET_ADMIN
+    ports:
+    - 10.77.110.100:943:943/tcp
+    - 10.77.110.100:8443:9443/tcp
+    - 10.77.110.100:1194:1194/udp
+    environment:
+    - PUID=1000
+    - PGID=1000
+    - TZ=America/Chicago
+    - INTERFACE=eth0
+    volumes:
+    - /var/lib/docker/volumes/openvpn-as/config:/config
+    restart: unless-stopped
+volumes: {}
