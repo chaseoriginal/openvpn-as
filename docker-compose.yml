@@ -1,6 +1,6 @@
 services:
   openvpn-as:
-    image: lscr.io/linuxserver/openvpn-as:latest
+    image: lscr.io/linuxserver/openvpn-as:latest@sha256:651e0d9174a2faa46f65807b39e3a8b70b2df3232d3f78f734d4bac37fca486f
     container_name: openvpn-as
     cap_add:
     - NET_ADMIN
